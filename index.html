@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch họp công ty</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      h1 {
+        color: #0066ff;
+        border-bottom: 2px solid #0066ff;
+        padding-bottom: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 700px;
+        margin-top: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px 16px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #0066ff;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f7faff;
+      }
+
+      tr:hover td {
+        background-color: #eef6ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+      <tr>
+        <th>Ngày</th>
+        <th>Giờ</th>
+        <th>Nội dung cuộc họp</th>
+      </tr>
+
+      <!-- Thứ Hai: 2 cuộc họp → gộp ô Ngày (rowspan=2) -->
+      <tr>
+        <td rowspan="2">Thứ Hai<br />15/10/2024</td>
+        <td>08:00 - 09:30</td>
+        <td>Họp giao ban đầu tuần</td>
+      </tr>
+      <tr>
+        <td>14:00 - 16:00</td>
+        <td>Họp kế hoạch dự án A</td>
+      </tr>
+
+      <!-- Thứ Ba: 1 cuộc họp kéo dài 3 giờ → gộp ô Giờ (colspan=2) -->
+      <tr>
+        <td>Thứ Ba<br />16/10/2024</td>
+        <td colspan="2">09:00 - 12:00 &mdash; Đào tạo nhân viên mới (3 giờ)</td>
+      </tr>
+
+      <!-- Thứ Tư: 3 cuộc họp → gộp ô Ngày (rowspan=3) -->
+      <tr>
+        <td rowspan="3">Thứ Tư<br />17/10/2024</td>
+        <td>08:30 - 10:00</td>
+        <td>Họp với khách hàng</td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:30</td>
+        <td>Review thiết kế UI/UX</td>
+      </tr>
+      <tr>
+        <td>15:00 - 17:00</td>
+        <td>Họp tổng kết tháng</td>
+      </tr>
+
+      <!-- Thứ Năm: 1 cuộc họp bình thường -->
+      <tr>
+        <td>Thứ Năm<br />18/10/2024</td>
+        <td>13:00 - 14:30</td>
+        <td>Họp nhóm Marketing</td>
+      </tr>
+
+      <!-- Thứ Sáu: 2 cuộc họp, 1 cuộc kéo dài → kết hợp rowspan và colspan -->
+      <tr>
+        <td rowspan="2">Thứ Sáu<br />19/10/2024</td>
+        <td>09:00 - 09:30</td>
+        <td>Họp nhanh (Stand-up)</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          10:00 - 12:00 &mdash; Workshop: Kỹ năng thuyết trình (2 giờ)
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
